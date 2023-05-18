@@ -49,4 +49,8 @@
             app:destination="@id/gameFragment3"
             app:popUpTo="@id/titleFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/nav_root"
+        android:name="com.example.androidtrivia.AboutFragment"
+        android:label="@string/title_about_trivia" />
 </navigation>
