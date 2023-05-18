@@ -13,12 +13,13 @@
     </data>
 
     <FrameLayout
+        android:id="@+id/gameframeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".GameFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/frameLayout"
+            android:id="@+id/gameConstraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

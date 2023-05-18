@@ -5,11 +5,12 @@
     tools:context=".TitleFragment">
 
     <FrameLayout
+        android:id="@+id/titleFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/titleConstraint"
+            android:id="@+id/titleConstraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

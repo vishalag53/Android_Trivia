@@ -27,4 +27,7 @@
     <string name="green">Green</string>
     <string name="yellow">Yellow</string>
     <string name="red">Red</string>
+    <string name="next_match">NEXT MATCH</string>
+    <string name="win_image">Win Image</string>
+    <string name="rules_image">Rules Image</string>
 </resources>
