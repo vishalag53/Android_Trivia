@@ -70,11 +70,11 @@ class GameFragment : Fragment() {
                         binding.invalidateAll()
                     }
                     else{
-                        view.findNavController().navigate(R.id.action_gameFragment3_to_gameWonFragment)
+                        view.findNavController().navigate(GameFragmentDirections.actionGameFragment3ToGameWonFragment(numQuestions,questionIndex))
                     }
                 }
                 else{
-                    view.findNavController().navigate(R.id.action_gameFragment3_to_gameOverFragment2)
+                    view.findNavController().navigate(GameFragmentDirections.actionGameFragment3ToGameOverFragment2())
                 }
             }
         }
@@ -91,7 +91,7 @@ class GameFragment : Fragment() {
         currentQuestion = questions[questionIndex]
         answers = currentQuestion.answers.toMutableList()
         answers.shuffle()
-        //(activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_android_trivia_question,questionIndex + 1,numQuestions)
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_android_trivia_question,questionIndex + 1,numQuestions)
     }
 
 }

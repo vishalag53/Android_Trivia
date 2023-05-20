@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"
+    android:id="@+id/nav_root"
     app:startDestination="@id/titleFragment">
 
 
@@ -39,6 +39,12 @@
             android:id="@+id/action_gameWonFragment_to_gameFragment3"
             app:destination="@id/gameFragment3"
             app:popUpTo="@id/titleFragment" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/gameOverFragment2"
@@ -50,7 +56,7 @@
             app:popUpTo="@id/titleFragment" />
     </fragment>
     <fragment
-        android:id="@+id/nav_root"
+        android:id="@+id/aboutFragment"
         android:name="com.example.androidtrivia.AboutFragment"
         android:label="@string/title_about_trivia" />
 </navigation>

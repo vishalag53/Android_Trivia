@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.androidtrivia.databinding.FragmentGameWonBinding
@@ -15,8 +16,10 @@ class GameWonFragment : Fragment() {
         val binding: FragmentGameWonBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_game_won, container, false)
         binding.nextMatchBtn.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment3)
+            view.findNavController().navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment3())
         }
+        val args = GameWonFragmentArgs.fromBundle(requireArguments())
+        Toast.makeText(context,"NumCorrect: ${args.numCorrect}, NumQuestion: ${args.numQuestions}",Toast.LENGTH_LONG).show()
         return binding.root
     }
 }
