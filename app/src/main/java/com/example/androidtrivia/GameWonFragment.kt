@@ -17,12 +17,17 @@ import com.example.androidtrivia.databinding.FragmentGameWonBinding
 
 @Suppress("DEPRECATION")
 class GameWonFragment : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         val binding: FragmentGameWonBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_game_won, container, false)
         binding.nextMatchBtn.setOnClickListener { view: View ->
-            view.findNavController().navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment3())
+            view.findNavController()
+                .navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment3())
         }
         /*val args = GameWonFragmentArgs.fromBundle(requireArguments())
         Toast.makeText(context,"NumCorrect: ${args.numCorrect}, NumQuestion: ${args.numQuestions}",Toast.LENGTH_LONG).show()*/
@@ -30,19 +35,7 @@ class GameWonFragment : Fragment() {
         return binding.root
     }
 
-    @SuppressLint("QueryPermissionsNeeded")
-    @Deprecated("Deprecated in Java")
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.winner_menu,menu)
-        // Check if the activity resolves
-        if (null == getShareIntent().resolveActivity(requireActivity().packageManager)){
-            // hide the menu item if it doesn't resolve
-            menu.findItem(R.id.share)?.isVisible = false
-        }
-    }
-
-    private fun getShareIntent() : Intent {
+    private fun getShareIntent(): Intent {
         val args = GameWonFragmentArgs.fromBundle(requireArguments())
         /*val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain")
@@ -51,19 +44,32 @@ class GameWonFragment : Fragment() {
         return shareIntent*/
 
         return ShareCompat.IntentBuilder.from(requireActivity())
-            .setText(getString(R.string.share_success_text,args.numCorrect,args.numQuestions))
+            .setText(getString(R.string.share_success_text, args.numCorrect, args.numQuestions))
             .setType("text/plain")
             .intent
     }
 
-    private fun shareSuccess(){
+    private fun shareSuccess() {
         startActivity((getShareIntent()))
 
     }
 
+    @SuppressLint("QueryPermissionsNeeded")
+    @Deprecated("Deprecated in Java")
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.winner_menu, menu)
+        // Check if the activity resolves
+        if (null == getShareIntent().resolveActivity(requireActivity().packageManager)) {
+            // hide the menu item if it doesn't resolve
+            menu.findItem(R.id.share)?.isVisible = false
+        }
+    }
+
+
     @Deprecated("Deprecated in Java")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        when (item.itemId) {
             R.id.share -> shareSuccess()
         }
         return super.onOptionsItemSelected(item)

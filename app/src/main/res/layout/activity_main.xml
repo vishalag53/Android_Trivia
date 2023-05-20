@@ -20,9 +20,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:defaultNavHost="true"
-                app:navGraph="@navigation/navigation"
-                tools:layout="@layout/fragment_title"
-                tools:ignore="FragmentTagUsage" />
+                app:navGraph="@navigation/navigation" />
+            <!--                tools:layout="@layout/fragment_title"/>-->
+
         </LinearLayout>
 
         <com.google.android.material.navigation.NavigationView
