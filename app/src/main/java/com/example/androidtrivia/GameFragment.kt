@@ -45,7 +45,7 @@ class GameFragment : Fragment() {
     private var questionIndex = 0
     private val numQuestions = ((questions.size + 1) / 2).coerceAtMost(3)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(inflater,R.layout.fragment_game, container,false)
 
         randomizeQuestions()

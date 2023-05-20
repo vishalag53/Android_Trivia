@@ -1,5 +1,6 @@
 package com.example.androidtrivia
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,14 +10,14 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.androidtrivia.databinding.FragmentGameWonBinding
 
+@Suppress("DEPRECATION")
 class GameWonFragment : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
         val binding: FragmentGameWonBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_game_won, container, false)
@@ -29,13 +30,15 @@ class GameWonFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("QueryPermissionsNeeded")
+    @Deprecated("Deprecated in Java")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater?.inflate(R.menu.winner_menu,menu)
+        inflater.inflate(R.menu.winner_menu,menu)
         // Check if the activity resolves
         if (null == getShareIntent().resolveActivity(requireActivity().packageManager)){
             // hide the menu item if it doesn't resolve
-            menu?.findItem(R.id.share)?.setVisible(false)
+            menu.findItem(R.id.share)?.isVisible = false
         }
     }
 
@@ -58,8 +61,9 @@ class GameWonFragment : Fragment() {
 
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item!!.itemId){
+        when(item.itemId){
             R.id.share -> shareSuccess()
         }
         return super.onOptionsItemSelected(item)
