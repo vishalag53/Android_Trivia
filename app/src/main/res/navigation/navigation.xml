@@ -46,7 +46,7 @@
     <fragment
         android:id="@+id/gameWonFragment"
         android:name="com.example.androidtrivia.GameWonFragment"
-        android:label="Game Won" >
+        android:label="@string/android_trivia" >
         <action
             android:id="@+id/action_gameWonFragment_to_gameFragment3"
             app:destination="@id/gameFragment3"
@@ -65,7 +65,7 @@
     <fragment
         android:id="@+id/gameOverFragment2"
         android:name="com.example.androidtrivia.GameOverFragment"
-        android:label="Game Over" >
+        android:label="@string/android_trivia" >
         <action
             android:id="@+id/action_gameOverFragment2_to_gameFragment3"
             app:destination="@id/gameFragment3"
