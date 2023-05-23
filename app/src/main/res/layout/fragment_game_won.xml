@@ -5,44 +5,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.androidtrivia.GameWonFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/gameWonConstraintLayout"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/youWinBackground">
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gameWonConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/youWinBackground">
 
 
-        <ImageView
-            android:id="@+id/youWinImage"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/game_over_height"
-            android:layout_marginStart="@dimen/question_vertical_margin"
-            android:layout_marginTop="104dp"
-            android:layout_marginEnd="@dimen/question_vertical_margin"
-            android:contentDescription="@string/win_image"
-            android:scaleType="fitCenter"
-            android:src="@drawable/you_win"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ImageContrastCheck" />
+            <ImageView
+                android:id="@+id/youWinImage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/game_over_height"
+                android:layout_marginStart="@dimen/question_vertical_margin"
+                android:layout_marginTop="104dp"
+                android:layout_marginEnd="@dimen/question_vertical_margin"
+                android:contentDescription="@string/win_image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/you_win"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
 
-        <Button
-            android:id="@+id/nextMatchBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/vertical_margin_top"
-            android:text="@string/next_match"
-            android:textColor="@color/youWinDark"
-            android:textSize="@dimen/button_text_size"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/youWinImage"
-            app:layout_constraintVertical_bias="0.296"
-            tools:ignore="TextContrastCheck" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/nextMatchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_top"
+                android:text="@string/next_match"
+                android:textColor="@color/youWinDark"
+                android:textSize="@dimen/button_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/youWinImage"
+                app:layout_constraintVertical_bias="0.296"
+                tools:ignore="TextContrastCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
 
 </layout>

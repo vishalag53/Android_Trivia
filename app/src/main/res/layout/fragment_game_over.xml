@@ -5,44 +5,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.androidtrivia.GameOverFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/gameOverConstraintLayout"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/gameOverBackground">
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gameOverConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gameOverBackground">
 
 
-        <ImageView
-            android:id="@+id/gameOverFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="362dp"
-            android:layout_marginStart="@dimen/horizontal_margin"
-            android:layout_marginTop="136dp"
-            android:layout_marginEnd="@dimen/horizontal_margin"
-            android:layout_marginBottom="@dimen/horizontal_margin"
-            android:scaleType="fitCenter"
-            android:src="@drawable/try_again"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/gameOverFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="362dp"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:layout_marginTop="136dp"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginBottom="@dimen/horizontal_margin"
+                android:scaleType="fitCenter"
+                android:src="@drawable/try_again"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/tryAgainBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/vertical_margin"
-            android:layout_marginTop="@dimen/vertical_margin"
-            android:layout_marginEnd="@dimen/question_vertical_margin"
-            android:layout_marginBottom="@dimen/horizontal_margin"
-            android:text="@string/try_again"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gameOverFragment"
-            app:layout_constraintVertical_bias="0.101" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/tryAgainBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/vertical_margin"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:layout_marginEnd="@dimen/question_vertical_margin"
+                android:layout_marginBottom="@dimen/horizontal_margin"
+                android:text="@string/try_again"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gameOverFragment"
+                app:layout_constraintVertical_bias="0.101" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </layout>
 
