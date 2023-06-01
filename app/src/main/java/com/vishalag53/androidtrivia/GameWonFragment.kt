@@ -1,4 +1,4 @@
-package com.example.androidtrivia
+package com.vishalag53.androidtrivia
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -13,7 +13,7 @@ import android.view.ViewGroup
 import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.androidtrivia.databinding.FragmentGameWonBinding
+import com.vishalag53.androidtrivia.databinding.FragmentGameWonBinding
 
 @Suppress("DEPRECATION")
 class GameWonFragment : Fragment() {

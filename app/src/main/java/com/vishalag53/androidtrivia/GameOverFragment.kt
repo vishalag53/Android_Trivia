@@ -1,4 +1,4 @@
-package com.example.androidtrivia
+package com.vishalag53.androidtrivia
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.androidtrivia.databinding.FragmentGameOverBinding
+import com.vishalag53.androidtrivia.databinding.FragmentGameOverBinding
 
 class GameOverFragment : Fragment() {
     override fun onCreateView(

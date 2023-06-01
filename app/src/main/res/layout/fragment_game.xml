@@ -3,13 +3,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.androidtrivia.GameFragment">
+    tools:context="com.example.androidtrivia.com.vishalag53.androidtrivia.GameFragment">
 
     <data>
 
         <variable
             name="game"
-            type="com.example.androidtrivia.GameFragment" />
+            type="com.vishalag53.androidtrivia.GameFragment" />
 
     </data>
 

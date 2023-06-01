@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context="com.example.androidtrivia.RulesFragment">
+    tools:context="com.example.androidtrivia.com.vishalag53.androidtrivia.RulesFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

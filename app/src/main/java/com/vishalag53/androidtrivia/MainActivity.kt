@@ -1,4 +1,4 @@
-package com.example.androidtrivia
+package com.vishalag53.androidtrivia
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,7 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
-import com.example.androidtrivia.databinding.ActivityMainBinding
+import com.vishalag53.androidtrivia.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {

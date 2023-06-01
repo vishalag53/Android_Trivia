@@ -1,4 +1,4 @@
-package com.example.androidtrivia
+package com.vishalag53.androidtrivia
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

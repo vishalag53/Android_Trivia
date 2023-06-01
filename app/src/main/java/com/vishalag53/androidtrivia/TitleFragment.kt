@@ -1,4 +1,4 @@
-package com.example.androidtrivia
+package com.vishalag53.androidtrivia
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,7 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.androidtrivia.databinding.FragmentTitleBinding
+import com.vishalag53.androidtrivia.databinding.FragmentTitleBinding
 
 class TitleFragment : Fragment() {
     override fun onCreateView(
